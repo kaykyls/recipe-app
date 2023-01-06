@@ -1,11 +1,11 @@
 import React from 'react'
-import OurChoices from "../components/OurChoices";
+import Deserts from "../components/Deserts";
 import Popular from "../components/Popular";
 
-function Home() {
+const Home = () => {
   return (
     <div>
-        <OurChoices/>
+        <Deserts/>
         <Popular/>
     </div>
   )
