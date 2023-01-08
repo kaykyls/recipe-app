@@ -5,7 +5,7 @@ import Popular from "../components/Popular";
 const Home = () => {
   return (
     <div>
-        <Deserts/>
+        {/* <Deserts/> */}
         <Popular/>
     </div>
   )
