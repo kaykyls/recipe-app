@@ -1,0 +1,21 @@
+.wrapper {
+    margin: 4rem 0rem;
+}
+
+.card img {
+    border-radius: 2rem;
+    /* width: 400px; */
+}
+
+.card {
+    position: relative;
+    /* display: flex; */
+    text-align: center;
+}
+
+.card p {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 3rem;
+    text-align: center;
+}
