@@ -19,14 +19,15 @@ const Popular = () => {
   console.log(popular)
 
   return (
-    <Fragment>
+    <div className="container">
           <h2>Popular</h2>
           <div className="wrapper">
             <Splide options={{
+              type   : 'loop',
               perPage: 3,
-              focus  : 0,
-              omitEnd: true,
-              arrows: false
+              perMove: 1,
+              arrows: true,
+              gap: "5rem"
             }}>
               {popular.map((recipe, index) => {
                 return(
@@ -34,14 +35,14 @@ const Popular = () => {
                     <div className="card">
                       <p>{recipe.title}</p>
                       <img src={recipe.image} alt={recipe.title} />
+                      <div className="gradient"></div>
                     </div>
                   </SplideSlide>
                 )
               })}
             </Splide>
-          
           </div>
-    </Fragment>
+    </div>
   )
 }
 

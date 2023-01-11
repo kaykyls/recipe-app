@@ -1,12 +1,12 @@
 import React from 'react'
-import Deserts from "../components/Deserts";
+import Desserts from "../components/Desserts";
 import Popular from "../components/Popular";
 
 const Home = () => {
   return (
     <div>
-        {/* <Deserts/> */}
         <Popular/>
+        <Desserts/>
     </div>
   )
 }
