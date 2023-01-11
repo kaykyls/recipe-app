@@ -27,7 +27,7 @@ const Popular = () => {
               perPage: 3,
               perMove: 1,
               arrows: true,
-              gap: "5rem"
+              gap: "2rem"
             }}>
               {popular.map((recipe, index) => {
                 return(

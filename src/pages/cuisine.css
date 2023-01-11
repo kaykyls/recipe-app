@@ -1,0 +1,21 @@
+ .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 5rem 2rem;
+}
+
+.cuisine-card {
+    height: 20rem;
+}
+
+.cuisine-card img {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    object-fit: cover
+}
+
+.cuisine-card h3 {
+    text-align: center;
+    padding: 1rem;
+}

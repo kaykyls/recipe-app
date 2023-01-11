@@ -2,13 +2,16 @@ import logo from './logo.svg';
 import Pages from './pages/Pages';
 import './App.css';
 import Categories from './components/Categories';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Categories/>
-      <Pages/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Categories/>
+        <Pages/>
+      </div>
+    </BrowserRouter>
   );
 }
 

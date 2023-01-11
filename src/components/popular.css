@@ -51,11 +51,32 @@
 } */
 
 .container {
-    padding: 0 20rem;
+    padding: 0 16rem;
 }
 
 .categories-list {
     display: flex;
     justify-content: center;
     margin: 2rem 0rem;
+    gap: 1rem;
+}
+
+.navlink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #fff;
+    background: #80CFA9;
+    width: 8rem;
+    height: 4rem;
+    transition: .3s;
+}
+
+.navlink:hover {
+    background: #6cb190;
+    cursor: pointer;
+    transition: .3s;
 }

@@ -28,7 +28,7 @@ const Desserts = () => {
           perPage: 4,
           perMove: 1,
           arrows: false,
-          gap: "5rem"
+          gap: "2rem"
         }}>
           {desserts.map((recipe, index) => {
             return(
