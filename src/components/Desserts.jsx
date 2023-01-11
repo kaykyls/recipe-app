@@ -11,7 +11,8 @@ const Desserts = () => {
   }, [])
 
   const getDesserts = async () => {
-    const res = await fetch(`https://api.spoonacular.com/food/menuItems/search?apiKey=${process.env.REACT_APP_API_KEY}&query=desserts&number=10`)
+    //${process.env.REACT_APP_API_KEY}
+    const res = await fetch(`https://api.spoonacular.com/food/menuItems/search?apiKey=e8e6dc9e66b143d48ebb9a22d8de6a5e&query=desserts&number=10`)
     const data = await res.json()
     console.log(data)
     setDesserts(data.menuItems)

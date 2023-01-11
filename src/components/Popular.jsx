@@ -11,7 +11,7 @@ const Popular = () => {
   }, [])
 
   const getPopular = async () => {
-    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
+    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=e8e6dc9e66b143d48ebb9a22d8de6a5e&number=9`)
     const data = await res.json()
     setPopular(data.recipes)
   }
