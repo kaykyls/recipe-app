@@ -12,10 +12,10 @@ const Desserts = () => {
 
   const getDesserts = async () => {
     //${process.env.REACT_APP_API_KEY}
-    const res = await fetch(`https://api.spoonacular.com/food/menuItems/search?apiKey=e8e6dc9e66b143d48ebb9a22d8de6a5e&query=desserts&number=10`)
+    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=e8e6dc9e66b143d48ebb9a22d8de6a5e&number=10&tags=dessert`)
     const data = await res.json()
     console.log(data)
-    setDesserts(data.menuItems)
+    setDesserts(data.recipes)
   }
 
   console.log(desserts)

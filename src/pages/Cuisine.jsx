@@ -13,9 +13,9 @@ const Cuisine = () => {
     }, [params.type])
 
     const getCuisine = async (type) => {
-        const res = await fetch(`https://api.spoonacular.com/food/menuItems/search?apiKey=${process.env.REACT_APP_API_KEY}&query=${type}&number=12`)
+        const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=e8e6dc9e66b143d48ebb9a22d8de6a5e&number=10&tags=${type}`)
         const data = await res.json()
-        setCuisine(data.menuItems)
+        setCuisine(data.recipes)
     }
 
     console.log(cuisine)

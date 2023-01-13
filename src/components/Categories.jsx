@@ -17,10 +17,10 @@ const Categories = () => {
             <GiNoodles/>
             <h3>Chinese</h3>
         </NavLink>
-        <NavLink className={"navlink"} to={"/cuisine/japanese"}>
+        {/* <NavLink className={"navlink"} to={"/cuisine/japanese"}>
             <GiChopsticks/>
             <h3>japanese</h3>
-            </NavLink>
+        </NavLink> */}
         <NavLink className={"navlink"} to={"/cuisine/desserts"}>
             <GiCupcake/>
             <h3>Desserts</h3>
