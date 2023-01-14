@@ -4,23 +4,23 @@
     gap: 5rem 2rem;
 }
 
-.cuisine-card {
+.searched-card {
     height: 20rem;
 }
 
-.cuisine-card a {
+.searched-card a {
     text-decoration: none;
     color: #000;
 }
 
-.cuisine-card img {
+.searched-card img {
     height: 100%;
     width: 100%;
     border-radius: 2rem;
     object-fit: cover
 }
 
-.cuisine-card h3 {
+.searched-card h3 {
     text-align: center;
     padding: 1rem;
 }

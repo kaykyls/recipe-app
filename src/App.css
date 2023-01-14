@@ -4,3 +4,7 @@
   box-sizing: border-box;
   font-family: Montserrat;
 }
+
+.container {
+  padding: 0 16rem;
+}

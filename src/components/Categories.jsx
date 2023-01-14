@@ -2,7 +2,7 @@ import React from 'react'
 import {FaPizzaSlice} from 'react-icons/fa'
 import {GiNoodles, GiChopsticks, GiCupcake, GiTacos} from 'react-icons/gi'
 import { NavLink } from 'react-router-dom'
-import "./popular.css"
+import "./css/categories.css"
 
 //7d4ed389154647b49fc79cc8633d6567
 

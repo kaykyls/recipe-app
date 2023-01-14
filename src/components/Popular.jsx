@@ -1,7 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import "./popular.css"
+import "./css/popular.css"
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import "@splidejs/splide/dist/css/splide.min.css"
+import { Link } from 'react-router-dom'
 
 const Popular = () => {
   const [popular, setPopular] = useState([])
@@ -11,7 +12,7 @@ const Popular = () => {
   }, [])
 
   const getPopular = async () => {
-    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=e8e6dc9e66b143d48ebb9a22d8de6a5e&number=9`)
+    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=7d4ed389154647b49fc79cc8633d6567&number=9`)
     const data = await res.json()
     setPopular(data.recipes)
   }
@@ -33,9 +34,11 @@ const Popular = () => {
                 return(
                   <SplideSlide key={index}>
                     <div className="card">
-                      <p>{recipe.title}</p>
-                      <img src={recipe.image} alt={recipe.title} />
-                      <div className="gradient"></div>
+                      <Link to={`/recipe/${recipe.id}`}>
+                        <p>{recipe.title}</p>
+                        <img src={recipe.image} alt={recipe.title} />
+                        <div className="gradient"></div>
+                      </Link>
                     </div>
                   </SplideSlide>
                 )

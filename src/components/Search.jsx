@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {FaSearch} from 'react-icons/fa'
-import "./search.css"
+import { useNavigate } from 'react-router-dom'
+import "./css/search.css"
 
 const Search = () => {
+  const [input, setInput] = useState("")
+  const navigate = useNavigate()
+
+  const handleChange = (e) => {
+    setInput(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    navigate(`/search/${input}`)
+  }
+
   return (
-    <form className="form-container" action="">
-        <input type="text" />
+    <form onSubmit={handleSubmit} className="form-container" action="">
+      <div>
+        <input onChange={handleChange} type="text" value={input}/>
+        <FaSearch/>
+      </div>
     </form>
   )
 }

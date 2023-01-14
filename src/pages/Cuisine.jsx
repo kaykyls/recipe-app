@@ -13,7 +13,7 @@ const Cuisine = () => {
     }, [params.type])
 
     const getCuisine = async (type) => {
-        const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=e8e6dc9e66b143d48ebb9a22d8de6a5e&number=10&tags=${type}`)
+        const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=7d4ed389154647b49fc79cc8633d6567&number=40&tags=${type}`)
         const data = await res.json()
         setCuisine(data.recipes)
     }
@@ -25,9 +25,11 @@ const Cuisine = () => {
             {cuisine.map((recipe, index) => {
                 return(
                     <div className="cuisine-card" key={index}>
-                        <img src={recipe.image} alt={recipe.title} />
-                        <h3>{recipe.title}</h3>
-                        {/* <div className="gradient"></div> */}
+                        <Link to={`/recipe/${recipe.id}`}>
+                            <img src={recipe.image} alt={recipe.title} />
+                            <h3>{recipe.title}</h3>
+                            {/* <div className="gradient"></div> */}
+                        </Link>
                     </div>
                 )
               })}

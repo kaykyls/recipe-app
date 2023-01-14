@@ -1,7 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import "./popular.css"
+import "./css/popular.css"
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import "@splidejs/splide/dist/css/splide.min.css"
+import { Link } from 'react-router-dom'
 
 const Desserts = () => {
   const [desserts, setDesserts] = useState([])
@@ -12,7 +13,7 @@ const Desserts = () => {
 
   const getDesserts = async () => {
     //${process.env.REACT_APP_API_KEY}
-    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=e8e6dc9e66b143d48ebb9a22d8de6a5e&number=10&tags=dessert`)
+    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=7d4ed389154647b49fc79cc8633d6567&number=10&tags=dessert`)
     const data = await res.json()
     console.log(data)
     setDesserts(data.recipes)
@@ -35,9 +36,11 @@ const Desserts = () => {
             return(
               <SplideSlide key={index}>
                 <div className="card">
-                  <p>{recipe.title}</p>
-                  <img src={recipe.image} alt={recipe.title} />
-                  <div className="gradient"></div>
+                  <Link to={`/recipe/${recipe.id}`}>
+                    <p>{recipe.title}</p>
+                    <img src={recipe.image} alt={recipe.title} />
+                    <div className="gradient"></div>
+                  </Link>
                 </div>
               </SplideSlide>
             )
