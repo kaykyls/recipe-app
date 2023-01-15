@@ -20,7 +20,9 @@ const Search = () => {
     <form onSubmit={handleSubmit} className="form-container" action="">
       <div>
         <input onChange={handleChange} type="text" value={input}/>
-        <FaSearch/>
+        <button className='search-btn'>
+          <FaSearch/>
+        </button>
       </div>
     </form>
   )

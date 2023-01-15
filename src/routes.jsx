@@ -1,11 +1,11 @@
 import React from 'react'
-import Home from './Home'
-import Cuisine from './Cuisine'
-import Searched from './Searched'
-import Recipe from './Recipe'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Cuisine from './pages/Cuisine'
+import Searched from './pages/Searched'
+import Recipe from './pages/Recipe'
+import { Route, Routes } from 'react-router-dom'
 
-function Pages() {
+const Pages = () => {
   return (
     <Routes>
       <Route path="/" element={<Home/>}/>

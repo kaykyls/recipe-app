@@ -6,5 +6,29 @@
 }
 
 .container {
-  padding: 0 16rem;
+  margin: 0 16rem;
+}
+
+@media (max-width: 1600px) {
+  .container {
+    margin: 0 12rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .container {
+    margin: 0 8rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    margin: 0 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0 2rem;
+  }
 }

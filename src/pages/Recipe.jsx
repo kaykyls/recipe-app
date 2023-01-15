@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import "./recipe.css"
+import "./css/recipe.css"
 
 const Recipe = () => {
     const [details, setDetails] = useState({})
@@ -42,7 +42,7 @@ const Recipe = () => {
     }
 
     return (
-        <div className="wrapper">
+        <div className="recipe-wrapper container">
             <div>
                 <h2>{details.title}</h2>
                 <img src={details.image} alt="" />

@@ -28,7 +28,17 @@ const Popular = () => {
               perPage: 3,
               perMove: 1,
               arrows: true,
-              gap: "2rem"
+              gap: "2rem",
+              breakpoints: {
+                1100: {
+                  perPage: 2,
+                  gap: "1rem"
+                },
+                800: {
+                  perPage: 1,
+                  gap: "1rem"
+                }
+              }
             }}>
               {popular.map((recipe, index) => {
                 return(

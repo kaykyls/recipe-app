@@ -30,7 +30,17 @@ const Desserts = () => {
           perPage: 4,
           perMove: 1,
           arrows: false,
-          gap: "2rem"
+          gap: "2rem",
+          breakpoints: {
+            1100: {
+              perPage: 3,
+              gap: "1rem"
+            },
+            800: {
+              perPage: 2,
+              gap: "1rem"
+            }
+          }
         }}>
           {desserts.map((recipe, index) => {
             return(

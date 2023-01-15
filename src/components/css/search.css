@@ -1,8 +1,38 @@
 .form-container {
+    display: flex;
+}
+
+.form-container input {
+    border: none;
+    font-size: 1.5rem;
+    color: #000;
+    border: #000 solid 2px; 
+    border-radius: 1rem;
+    outline: none;
+    background: #fff;
+    /* width: 100%; */
+}
+
+.search-btn {
+    border: #000 solid 2px; 
+    background: #fff;
+
+
+}
+
+.search-btn svg{
+    padding: .7rem 3rem;
+    color: #000;
+
+}
+
+/* .svg-container {
+    border: #000 solid 2px;
+} */
+
+/* .form-container {
     margin: 1rem 30rem 0 30rem;
     position: relative;
-    /* width: 100%; */
-    /* background: #000; */
 }
 
 .form-container input {
@@ -19,7 +49,6 @@
 
 .form-container div {
     width: 100%;
-
     position: relative;
 }
 
@@ -29,4 +58,4 @@
     left: 0%;
     transform: translate(100%, -50%);
     color: #fff;
-}
+} */
