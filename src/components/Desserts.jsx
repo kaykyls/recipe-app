@@ -12,8 +12,8 @@ const Desserts = () => {
   }, [])
 
   const getDesserts = async () => {
-    //${process.env.REACT_APP_API_KEY}
-    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=7d4ed389154647b49fc79cc8633d6567&number=10&tags=dessert`)
+    //
+    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10&tags=dessert`)
     const data = await res.json()
     console.log(data)
     setDesserts(data.recipes)
@@ -22,7 +22,7 @@ const Desserts = () => {
   console.log(desserts)
 
   return (
-    <div className="container">
+    <div>
       <h2>Desserts</h2>
       <div className="wrapper">
         <Splide options={{
@@ -37,7 +37,7 @@ const Desserts = () => {
               gap: "1rem"
             },
             800: {
-              perPage: 2,
+              perPage: 1,
               gap: "1rem"
             }
           }

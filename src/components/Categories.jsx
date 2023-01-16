@@ -8,7 +8,7 @@ import "./css/categories.css"
 
 const Categories = () => {
   return (
-    <div className='container categories-list'>
+    <div className='categories-list'>
        <NavLink className={"navlink"} to={"/cuisine/italian"}>
             <FaPizzaSlice/>
             <h3>Italian</h3>
@@ -17,14 +17,10 @@ const Categories = () => {
             <GiNoodles/>
             <h3>Chinese</h3>
         </NavLink>
-        {/* <NavLink className={"navlink"} to={"/cuisine/japanese"}>
+        {/* <NavLink className={"navlink"} to={"/cuisine/brazilian"}>
             <GiChopsticks/>
-            <h3>japanese</h3>
+            <h3>Brazilian</h3>
         </NavLink> */}
-        <NavLink className={"navlink"} to={"/cuisine/desserts"}>
-            <GiCupcake/>
-            <h3>Desserts</h3>
-        </NavLink>
         <NavLink className={"navlink"} to={"/cuisine/mexican"}>
             <GiTacos/>
             <h3>Mexican</h3>

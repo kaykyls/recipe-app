@@ -9,7 +9,7 @@ import Header from './components/Header';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App container">
         <Header/>
         {/* <Search/> */}
         <Categories/>

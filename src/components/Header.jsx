@@ -5,7 +5,7 @@ import Search from './Search';
 
 const Header = () => {
   return (
-    <header className='container'>
+    <header>
       <Link className='logo' to={"/"}>RecipeApp</Link>
       <Search/>
     </header>

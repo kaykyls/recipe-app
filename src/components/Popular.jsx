@@ -12,7 +12,7 @@ const Popular = () => {
   }, [])
 
   const getPopular = async () => {
-    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=7d4ed389154647b49fc79cc8633d6567&number=9`)
+    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`)
     const data = await res.json()
     setPopular(data.recipes)
   }
@@ -20,14 +20,14 @@ const Popular = () => {
   console.log(popular)
 
   return (
-    <div className="container">
+    <div>
           <h2>Popular</h2>
           <div className="wrapper">
             <Splide options={{
               type   : 'loop',
               perPage: 3,
               perMove: 1,
-              arrows: true,
+              arrows: false,
               gap: "2rem",
               breakpoints: {
                 1100: {

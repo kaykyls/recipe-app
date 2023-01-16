@@ -1,8 +1,10 @@
 .recipe-wrapper {
-    margin-top: 10rem;
+    margin-top: 4rem;
     margin-bottom: 5rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
+    gap: 4rem;
 }
 
 .recipe-wrapper h2 {
@@ -10,16 +12,16 @@
 }
 
 .recipe-wrapper li {
-    font-size: 1.2rem;
+    list-style: disc;
+    list-style-position: inside;
+    font-size: 1rem;
     line-height: 2.5rem;
 }
 
 .recipe-wrapper ul {
     margin-top: 2rem;
-}
-
-.info {
-    margin-left: 10rem;
+    font-weight: bold;
+    list-style-type: none
 }
 
 .info button {
@@ -27,6 +29,53 @@
     color: #313131;
     background: #fff;
     border: 2px solid #000;
-    margin-right: 2rem;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.recipe-wrapper div img {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+ul {
+    margin: 0
+}
+
+.instructions {
+    margin-top: 1rem;
+}
+
+.about span{
+    /* font-weight: bold; */
+    line-height: 1.8rem;
+}
+
+.about span a{
+    color: #000;
+}
+
+.instructions span {
+    line-height: 1.8rem;
+}
+
+.info-btns {
+    display: flex;
+    gap: .5rem;
+}
+
+.about img {
+    margin-bottom: 2rem;
+}
+
+.active-tab {
+    background: #343434 !important; 
+    color: #fff !important;
+}
+
+@media (max-width: 1100px) {
+    .recipe-wrapper {
+        display: flex;
+        flex-direction: column;
+    }    
 }

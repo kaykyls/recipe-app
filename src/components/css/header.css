@@ -1,10 +1,14 @@
 header {
     display: flex;
     padding: 2rem 0;
+    justify-content: space-between;
 }
 
 .logo {
     font-size: 1.5rem;
     text-decoration: none;
     color: #000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }

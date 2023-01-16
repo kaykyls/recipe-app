@@ -13,17 +13,18 @@ const Search = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    if (input !== "")
     navigate(`/search/${input}`)
   }
 
   return (
     <form onSubmit={handleSubmit} className="form-container" action="">
-      <div>
+      {/* <div> */}
         <input onChange={handleChange} type="text" value={input}/>
         <button className='search-btn'>
           <FaSearch/>
         </button>
-      </div>
+      {/* </div> */}
     </form>
   )
 }

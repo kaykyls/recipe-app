@@ -4,58 +4,34 @@
 
 .form-container input {
     border: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #000;
-    border: #000 solid 2px; 
-    border-radius: 1rem;
+    border-left: #000 solid 2px;
+    border-top: #000 solid 2px;
+    border-bottom: #000 solid 2px;
+    border-radius: 1rem 0 0 1rem;
     outline: none;
     background: #fff;
-    /* width: 100%; */
+    padding-left: 1rem;
+    width: 20rem;
 }
 
 .search-btn {
-    border: #000 solid 2px; 
+    display: flex;
+    border-right: #000 solid 2px;
+    border-top: #000 solid 2px;
+    border-bottom: #000 solid 2px;
+    border-radius: 0 1rem 1rem 0;
     background: #fff;
-
-
+    padding: .7rem .7rem;
 }
 
 .search-btn svg{
-    padding: .7rem 3rem;
     color: #000;
-
 }
 
-/* .svg-container {
-    border: #000 solid 2px;
-} */
-
-/* .form-container {
-    margin: 1rem 30rem 0 30rem;
-    position: relative;
+@media (max-width: 600px) {
+    .form-container input {
+        width: 8rem;
+    }
 }
-
-.form-container input {
-    border: none;
-    font-size: 1.5rem;
-    color: white;
-    padding: 1rem 3rem;
-    border-radius: 1rem;
-    outline: none;
-    background: #707070;
-    width: 100%;
-
-}
-
-.form-container div {
-    width: 100%;
-    position: relative;
-}
-
-.form-container svg {
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translate(100%, -50%);
-    color: #fff;
-} */

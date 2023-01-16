@@ -24,3 +24,7 @@
     cursor: pointer;
     transition: .3s;
 }
+
+.active {
+    background: #6cb190;
+}
