@@ -29,6 +29,8 @@ const Popular = () => {
               perMove: 1,
               arrows: false,
               gap: "2rem",
+              pagination: false,
+              autoplay: true,
               breakpoints: {
                 1100: {
                   perPage: 2,
