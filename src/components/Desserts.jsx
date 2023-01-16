@@ -26,7 +26,6 @@ const Desserts = () => {
       <h2>Desserts</h2>
       <div className="wrapper">
         <Splide options={{
-          type   : 'loop',
           perPage: 4,
           perMove: 1,
           arrows: false,

@@ -24,7 +24,6 @@ const Popular = () => {
           <h2>Popular</h2>
           <div className="wrapper">
             <Splide options={{
-              type   : 'loop',
               perPage: 3,
               perMove: 1,
               arrows: false,
