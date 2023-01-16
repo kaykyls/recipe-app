@@ -15,6 +15,7 @@ const Search = () => {
     e.preventDefault()
     if (input !== "")
     navigate(`/search/${input}`)
+    setInput("")
   }
 
   return (
