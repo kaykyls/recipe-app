@@ -15,9 +15,9 @@ function App() {
     const data = await res.json()
     // setApiKeyIsValid(data)
     if(data.code === 402) {
-      setApiKeyIsValid(true)
-    } else {
       setApiKeyIsValid(false)
+    } else {
+      setApiKeyIsValid(true)
     }
   }
 
