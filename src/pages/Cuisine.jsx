@@ -9,7 +9,6 @@ const Cuisine = () => {
 
     useEffect(() => {
         getCuisine(params.type)
-        console.log(params.type)
     }, [params.type])
 
     const getCuisine = async (type) => {
@@ -17,8 +16,6 @@ const Cuisine = () => {
         const data = await res.json()
         setCuisine(data.recipes)
     }
-
-    console.log(cuisine)
 
     return (
         <div className="grid">

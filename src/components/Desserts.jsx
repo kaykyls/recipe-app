@@ -15,11 +15,8 @@ const Desserts = () => {
     //
     const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10&tags=dessert`)
     const data = await res.json()
-    console.log(data)
     setDesserts(data.recipes)
   }
-
-  console.log(desserts)
 
   return (
     <div>

@@ -17,8 +17,6 @@ const Popular = () => {
     setPopular(data.recipes)
   }
 
-  console.log(popular)
-
   return (
     <div>
           <h2>Popular</h2>
