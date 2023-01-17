@@ -8,19 +8,18 @@ import Header from './components/Header';
 import { useEffect, useState, Fragment } from 'react';
 
 function App() {
-  const [apiKeyIsValid, setApiKeyIsValid] = useState(false)
+  const [apiKeyIsValid, setApiKeyIsValid] = useState(true)
 
   const checkApiKey = async () => {
     const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}`)
     const data = await res.json()
-    // setApiKeyIsValid(data)
     if(data.code === 402) {
       setApiKeyIsValid(false)
     } else {
       setApiKeyIsValid(true)
     }
   }
-
+  
   useEffect(() => {
     checkApiKey()
   }, [])
