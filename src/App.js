@@ -37,10 +37,9 @@ function App() {
           <Pages/>
         </Fragment> :
         <div>
-          <h2>This API key has reached its limit, try again tomorrow</h2>
+          <h2>This API key has reached its daily limit, try again tomorrow.</h2>
         </div>
-      }
-        
+        }
       </div>
     </BrowserRouter>
   );
