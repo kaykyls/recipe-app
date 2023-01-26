@@ -1,6 +1,7 @@
 import React from 'react'
 import {FaPizzaSlice} from 'react-icons/fa'
 import {GiNoodles, GiChopsticks, GiCupcake, GiTacos} from 'react-icons/gi'
+import { TbSoup } from 'react-icons/tb'
 import { NavLink } from 'react-router-dom'
 import "./css/categories.css"
 
@@ -17,13 +18,13 @@ const Categories = () => {
             <GiNoodles/>
             <h3>Chinese</h3>
         </NavLink>
-        {/* <NavLink className={"navlink"} to={"/cuisine/brazilian"}>
-            <GiChopsticks/>
-            <h3>Brazilian</h3>
-        </NavLink> */}
         <NavLink className={"navlink"} to={"/cuisine/mexican"}>
             <GiTacos/>
             <h3>Mexican</h3>
+        </NavLink>
+        <NavLink className={"navlink"} to={"/cuisine/indian"}>
+            <TbSoup/>
+            <h3>Indian</h3>
         </NavLink>
     </div>
   )
