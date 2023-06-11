@@ -14,7 +14,7 @@
 ---
 
 # Preview
-<a href="https://chat-app-kaykyls.vercel.app/"><img height="400px" width="400px" src="https://kaykyls.github.io/img/recipe-app.png"/></a>
+<a href="https://kaykyls-recipe-app.netlify.app/"><img height="400px" width="400px" src="https://kaykyls.github.io/img/recipe-app.png"/></a>
 
 # Features
 - [x] Search foods by category
