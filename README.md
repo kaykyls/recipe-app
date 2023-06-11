@@ -17,10 +17,10 @@
 <a href="https://kaykyls-recipe-app.netlify.app/"><img height="400px" width="400px" src="https://kaykyls.github.io/img/recipe-app.png"/></a>
 
 # Features
-- [x] Search foods by category
-- [x] Search food by name
-- [x] View food image and name
-- [x] View instructions and ingredients
+- [x] Search recipes by category
+- [x] Search recipe by name
+- [x] View recipe image and name
+- [x] View recipe instructions and ingredients
 
 # Prerequisites
 Make sure you have installed all of the following prerequisites:
