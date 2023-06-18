@@ -18,7 +18,7 @@ const Popular = () => {
   }
 
   return (
-    <div>
+    <div className='container'>
           <h2>Popular</h2>
           <div className="wrapper">
             <Splide options={{

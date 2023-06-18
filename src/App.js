@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import Pages from './routes';
 import './App.css';
-import Categories from './components/Categories';
+import Categories from './components/Hero';
 import { BrowserRouter } from 'react-router-dom';
 // import Search from './components/Search';
 import Header from './components/Header';
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App container">
+      <div className="App">
         <Header/>
         {apiKeyIsValid ? 
         <Fragment>

@@ -19,7 +19,7 @@ const Desserts = () => {
   }
 
   return (
-    <div>
+    <div className='container'>
       <h2>Desserts</h2>
       <div className="wrapper">
         <Splide options={{
