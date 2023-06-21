@@ -18,7 +18,7 @@ const Searched = () => {
     }, [params.search])
 
     return (
-        <div className='grid'>
+        <div className='grid container'>
             {searched.map((item, index) => {
                 return(
                     <div className="searched-card" key={index}>

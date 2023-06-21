@@ -11,6 +11,12 @@ const Search = () => {
     setInput(e.target.value)
   }
 
+  const [searchIsFocused, setSearchIsFocused] =useState(false)
+
+  const handleSearchFocus = (condition) => {
+    setSearchIsFocused(condition)
+  }
+  
   const handleSubmit = (e) => {
     e.preventDefault()
     if (input !== "")
@@ -19,13 +25,11 @@ const Search = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="form-container" action="">
-      {/* <div> */}
-        <input onChange={handleChange} type="text" value={input}/>
-        <button className='search-btn'>
-          <FaSearch/>
-        </button>
-      {/* </div> */}
+    <form onSubmit={handleSubmit} className={`hero-search${searchIsFocused ? " search-is-focused" : ""}`}>
+      <label htmlFor='search-input' className="icon">
+        <FaSearch/>
+      </label>
+      <input value={input} onChange={(e) => handleChange(e)} id='search-input' onBlur={() => handleSearchFocus(false)} onFocus={() => handleSearchFocus(true)} type="text" placeholder='Search...'/>
     </form>
   )
 }
