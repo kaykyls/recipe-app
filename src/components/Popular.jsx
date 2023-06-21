@@ -12,7 +12,7 @@ const Popular = () => {
   }, [])
 
   const getPopular = async () => {
-    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=5`)
+    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=7`)
     const data = await res.json()
     setPopular(data.recipes)
   }
@@ -26,7 +26,7 @@ const Popular = () => {
                 <div className="card" key={index}>
                   <Link to={`/recipe/${recipe.id}`}>
                     <p>{recipe.title}</p>
-                    <img src={recipe.image} alt={recipe.title} />
+                    <img src={recipe.image ? recipe.image : "https://png.pngtree.com/png-clipart/20200225/original/pngtree-set-of-food-doodle-vector-illustration-png-image_5306662.jpg"} alt={recipe.title} />
                     <div className="gradient"></div>
                   </Link>
                 </div>

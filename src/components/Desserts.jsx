@@ -3,10 +3,11 @@ import "./css/popular.css"
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import "@splidejs/splide/dist/css/splide.min.css"
 import { Link } from 'react-router-dom'
+import "./css/desserts.css"
 
 const Desserts = () => {
   const [desserts, setDesserts] = useState([])
-
+  console.log(desserts)
   useEffect(() => {
     getDesserts()
   }, [])
@@ -20,13 +21,13 @@ const Desserts = () => {
 
   return (
     <div className='container'>
-      <h2>Desserts</h2>
+      <h2 className='desserts-title'>Desserts</h2>
       <div className="wrapper">
         <Splide options={{
           perPage: 4,
           perMove: 1,
-          arrows: false,
-          gap: "2rem",
+          arrows: true,
+          gap: "1rem",
           autoplay: true,
           breakpoints: {
             1100: {
@@ -42,13 +43,13 @@ const Desserts = () => {
           {desserts.map((recipe, index) => {
             return(
               <SplideSlide key={index}>
-                <div className="card">
+                <div className="dessert-card">
                   <Link to={`/recipe/${recipe.id}`}>
-                    <p>{recipe.title}</p>
                     <img src={recipe.image} alt={recipe.title} />
-                    <div className="gradient"></div>
+                    <div className="dessert-gradient"></div>
                   </Link>
                 </div>
+                <p className='dessert-title'>{recipe.title}</p>
               </SplideSlide>
             )
           })}

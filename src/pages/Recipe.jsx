@@ -58,7 +58,7 @@ const Recipe = () => {
     }
 
     return (
-        <div className="recipe-wrapper">
+        <div className="recipe-wrapper container">
             <div className='about'>
                 <h2>{details.title}</h2>
                 <img src={details.image} alt="" />
