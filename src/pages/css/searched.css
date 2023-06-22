@@ -1,11 +1,11 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 5rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 5rem 1rem;
 }
 
 .searched-card {
-    height: 20rem;
+    min-height: 20rem;
 }
 
 .searched-card a {
@@ -16,11 +16,13 @@
 .searched-card img {
     height: 100%;
     width: 100%;
-    border-radius: 2rem;
+    border-radius: .5rem;
     object-fit: cover
 }
 
 .searched-card h3 {
-    text-align: center;
-    padding: 1rem;
+    /* text-align: center; */
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
