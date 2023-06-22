@@ -35,7 +35,7 @@ const Desserts = () => {
               gap: "1rem"
             },
             800: {
-              perPage: 1,
+              perPage: 2,
               gap: "1rem"
             }
           }

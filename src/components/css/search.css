@@ -6,9 +6,6 @@
     border: none;
     font-size: 1rem;
     color: #000;
-    border-left: #000 solid 2px;
-    border-top: #000 solid 2px;
-    border-bottom: #000 solid 2px;
     border-radius: 1rem 0 0 1rem;
     outline: none;
     background: #fff;
@@ -28,6 +25,12 @@
 
 .search-btn svg{
     color: #000;
+}
+
+@media (max-width: 768px) {
+    .hero-search {
+        width: 100%;
+    }
 }
 
 @media (max-width: 600px) {

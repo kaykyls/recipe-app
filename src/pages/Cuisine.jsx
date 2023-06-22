@@ -17,7 +17,7 @@ const Cuisine = () => {
     }
 
     return (
-        <div className="grid">
+        <div className="grid container">
             {cuisine.map((recipe, index) => {
                 return(
                     <div className="cuisine-card" key={index}>

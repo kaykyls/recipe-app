@@ -76,3 +76,25 @@
 .search-is-focused {
     outline: 2px solid #000;
 }
+
+@media (max-width: 768px) {
+    .hero-wrapper {
+        padding: 6rem 1rem;
+    }
+
+    .hero-wrapper h1 {
+        font-size: 2rem;
+    }
+
+    .hero span {
+        font-size: 1.5rem;
+    }
+
+    .hero-search .icon {
+        padding: .8rem;
+    }
+    
+    .hero-search input {
+        padding: .8rem 0;
+    }
+}

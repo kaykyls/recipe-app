@@ -10,9 +10,13 @@ import {GiNoodles} from 'react-icons/gi'
 import { useState } from 'react'
 import { useEffect } from 'react';
 import { useRef } from 'react';
+import { FaHamburger } from 'react-icons/fa';
+import {FaBars} from 'react-icons/fa'
+import {CgClose} from 'react-icons/cg'
 
 const Header = () => {
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false)
+  const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false)
   const dropdownRef = useRef(null);
 
   const handleDropdown = () => {
@@ -25,6 +29,10 @@ const Header = () => {
     }
   }
 
+  const handleHamburgerMenu = () => {
+    setHamburgerIsOpen(!hamburgerIsOpen)
+  }
+
   useEffect(() => {
     window.addEventListener('click', handleClickOutside)
     return () => {
@@ -35,23 +43,29 @@ const Header = () => {
   return (
     <header className='container'>
       <Link className='logo' to={"/"}><img src={logo}/></Link>
-        <nav className='nav-links'>
+        <span onClick={handleHamburgerMenu} className="hamburger">
+          <FaBars/>
+        </span>
+        
+        <nav className={`nav-links${hamburgerIsOpen ? " hamburger-is-active" : ""}`}>
+          <span onClick={handleHamburgerMenu} className="close">
+            <CgClose/>
+          </span>
           <li><Link to={"/"}>Home</Link></li>
           
-          <li ref={dropdownRef} onMouseDown={(e) => e.preventDefault()} onClick={handleDropdown} className='categories-btn'>Categories<FaCaretDown/>
+          <li ref={dropdownRef} onMouseDown={(e) => e.preventDefault()} onClick={handleDropdown} className='cuisines-btn'>Cuisines<FaCaretDown/>
           {dropdownIsOpen &&
-            <ul className='categories-dropdown'>
-              <li><Link to={"/categories/italian"}><FaPizzaSlice/> Italian</Link></li>
-              <li><Link to={"/categories/mexican"}><GiTacos/> Mexican</Link></li>
-              <li><Link to={"/categories/chinese"}><GiNoodles/> Chinese</Link></li>
+            <ul className='cuisines-dropdown'>
+              <li><Link to={"/cuisine/italian"}><FaPizzaSlice/> Italian</Link></li>
+              <li><Link to={"/cuisine/mexican"}><GiTacos/> Mexican</Link></li>
+              <li><Link to={"/cuisine/chinese"}><GiNoodles/> Chinese</Link></li>
+              <li><Link to={"/cuisine/american"}><FaHamburger/> American</Link></li>
             </ul>
           }
             
           </li>
           
           </nav>
-
-      {/* <Search/> */}
     </header>
   )
 }
