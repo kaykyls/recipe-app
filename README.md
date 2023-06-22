@@ -1,5 +1,6 @@
 <div>
 <h1>Recipe App</h1>
+<h2>Started new design, not responsive yet!</h2>
 <p>This is a Recipe App made with React using the Spoonacular API.</p>
 
 <p>
