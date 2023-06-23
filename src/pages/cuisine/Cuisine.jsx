@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import "./css/cuisine.css"
+import "./cuisine.css"
 
 const Cuisine = () => {
     const [cuisine, setCuisine] = useState([])
@@ -18,12 +18,12 @@ const Cuisine = () => {
 
     return (
         <div className="grid container">
-            {cuisine.map((recipe, index) => {
+            {cuisine?.map((recipe, index) => {
                 return(
                     <div className="cuisine-card" key={index}>
-                        <Link to={`/recipe/${recipe.id}`}>
-                            <img src={recipe.image} alt={recipe.title} />
-                            <h3>{recipe.title}</h3>
+                        <Link to={`/recipe/${recipe?.id}`}>
+                            <img src={recipe?.image} alt={recipe?.title} />
+                            <h3>{recipe?.title}</h3>
                             {/* <div className="gradient"></div> */}
                         </Link>
                     </div>

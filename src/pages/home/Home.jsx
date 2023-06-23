@@ -1,6 +1,6 @@
 import React from 'react'
-import Desserts from "../components/Desserts";
-import Popular from "../components/Popular";
+import Desserts from "../../components/desserts/Desserts";
+import Popular from "../../components/popular/Popular";
 
 const Home = () => {
   return (

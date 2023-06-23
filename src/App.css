@@ -11,13 +11,13 @@
 
 @media (max-width: 1600px) {
   .container {
-    margin: 0 12rem;
+    margin: 0 10rem;
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1100px) {
   .container {
-    margin: 0 8rem;
+    margin: 0 6rem;
   }
 }
 

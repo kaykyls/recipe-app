@@ -1,8 +1,8 @@
 import React from 'react'
-import Home from './pages/Home'
-import Cuisine from './pages/Cuisine'
-import Searched from './pages/Searched'
-import Recipe from './pages/Recipe'
+import Home from './pages/home/Home'
+import Cuisine from './pages/cuisine/Cuisine'
+import Searched from './pages/searched/Searched'
+import Recipe from './pages/recipe/Recipe'
 import { Route, Routes } from 'react-router-dom'
 
 const Pages = () => {

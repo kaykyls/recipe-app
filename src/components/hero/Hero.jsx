@@ -3,13 +3,13 @@ import {FaPizzaSlice} from 'react-icons/fa'
 import {GiNoodles, GiChopsticks, GiCupcake, GiTacos} from 'react-icons/gi'
 import { TbSoup } from 'react-icons/tb'
 import { NavLink } from 'react-router-dom'
-import "./css/hero.css"
+import "./hero.css"
 import { useState } from 'react'
-import Search from './Search'
+import Search from '../search/Search'
 
 //7d4ed389154647b49fc79cc8633d6567
 
-const Categories = () => {
+const Hero = () => {
   return (
     <div className='hero'>
        <div className="hero-wrapper">
@@ -21,4 +21,4 @@ const Categories = () => {
   )
 }
 
-export default Categories
+export default Hero

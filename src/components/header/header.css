@@ -1,8 +1,7 @@
 .header-wrapper {
     display: flex;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     justify-content: space-between;
-    /* box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); */
 }
 
 .header {
@@ -10,12 +9,12 @@
 }
 
 .logo {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
     display: flex;
     align-items: center;
+}
+
+.logo img {
+    height: 50px;
 }
 
 .nav-links {
@@ -91,7 +90,6 @@
     }
 
     .nav-links {
-        /* display: none; */
         position: fixed;
         top: 0;
         left: 0;

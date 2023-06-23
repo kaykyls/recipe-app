@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useParams } from 'react-router-dom'
-import "./css/recipe.css"
+import "./recipe.css"
 
 const Recipe = () => {
     const [details, setDetails] = useState({})
@@ -51,7 +51,7 @@ const Recipe = () => {
         case "instructions":
             tab =  (
                <div className='instructions'>
-                    <span dangerouslySetInnerHTML={{__html: details.instructions}}></span>
+                    <span dangerouslySetInnerHTML={{__html: details?.instructions}}></span>
                 </div> 
             )
             break
@@ -60,9 +60,9 @@ const Recipe = () => {
     return (
         <div className="recipe-wrapper container">
             <div className='about'>
-                <h2>{details.title}</h2>
-                <img src={details.image} alt="" />
-                <span dangerouslySetInnerHTML={{__html: details.summary}}></span>
+                <h2>{details?.title}</h2>
+                <img src={details?.image} alt="" />
+                <span dangerouslySetInnerHTML={{__html: details?.summary}}></span>
             </div>
             <div className="info">
                 <div className="info-btns">

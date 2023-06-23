@@ -1,13 +1,12 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import "./css/popular.css"
+import React, { useEffect, useState } from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import "@splidejs/splide/dist/css/splide.min.css"
 import { Link } from 'react-router-dom'
-import "./css/desserts.css"
+import "./desserts.css"
 
 const Desserts = () => {
   const [desserts, setDesserts] = useState([])
-  console.log(desserts)
+
   useEffect(() => {
     getDesserts()
   }, [])
@@ -40,16 +39,16 @@ const Desserts = () => {
             }
           }
         }}>
-          {desserts.map((recipe, index) => {
+          {desserts?.map((recipe, index) => {
             return(
               <SplideSlide key={index}>
                 <div className="dessert-card">
-                  <Link to={`/recipe/${recipe.id}`}>
-                    <img src={recipe.image} alt={recipe.title} />
+                  <Link to={`/recipe/${recipe?.id}`}>
+                    <img src={recipe?.image} alt={recipe?.title} />
                     <div className="dessert-gradient"></div>
                   </Link>
                 </div>
-                <p className='dessert-title'>{recipe.title}</p>
+                <p className='dessert-title'>{recipe?.title}</p>
               </SplideSlide>
             )
           })}

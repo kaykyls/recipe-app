@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./css/header.css"
-import Search from './Search';
+import "./header.css"
 import logo from './logo.svg'
 import {FaCaretDown} from 'react-icons/fa'
 import {FaPizzaSlice} from 'react-icons/fa'
