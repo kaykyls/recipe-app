@@ -27,7 +27,7 @@ const Desserts = () => {
           perPage: 4,
           perMove: 1,
           arrows: true,
-          gap: "1rem",
+          gap: ".7rem",
           autoplay: true,
           breakpoints: {
             1100: {

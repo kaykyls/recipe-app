@@ -78,23 +78,32 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        margin-bottom: 1rem;
+    }
+
     .hero-wrapper {
-        padding: 6rem 1rem;
+        padding: 5rem 1rem;
     }
 
     .hero-wrapper h1 {
-        font-size: 2rem;
-    }
-
-    .hero span {
         font-size: 1.5rem;
     }
 
+    .hero span {
+        font-size: 1.2rem;
+    }
+
     .hero-search .icon {
-        padding: .8rem;
+        padding: .5rem .8rem;
+        font-size: 1.2rem;
     }
     
     .hero-search input {
-        padding: .8rem 0;
+        padding: .5rem 0;
+    }
+
+    .hero-search input::placeholder {
+        font-size: 1rem;
     }
 }

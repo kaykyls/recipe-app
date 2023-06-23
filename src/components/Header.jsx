@@ -41,7 +41,8 @@ const Header = () => {
   }, [])
 
   return (
-    <header className='container'>
+    <header className='header'>
+      <div className="header-wrapper container">
       <Link className='logo' to={"/"}><img src={logo}/></Link>
         <span onClick={handleHamburgerMenu} className="hamburger">
           <FaBars/>
@@ -66,6 +67,8 @@ const Header = () => {
           </li>
           
           </nav>
+      </div>
+      
     </header>
   )
 }

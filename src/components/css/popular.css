@@ -60,7 +60,19 @@
 .popular-title {
     font-size: 2.5rem;
     font-weight: 600;
+    position: relative;
 }
+
+/* .popular-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 100px;
+    height: 4px;
+    background: #4ade80;
+    margin: 1rem auto;
+} */
 
 .popular-grid {
     display: grid;
@@ -95,8 +107,14 @@
 }
 
 @media (max-width: 768px) {
+    .popular-grid {
+        margin-top: 1rem;
+        gap: .7rem;
+    }
+
     .card {
         min-height: 170px;
+        border-radius: .5rem;
     }
 
     .card:nth-child(2) {
@@ -132,4 +150,14 @@
     .popular-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .popular-title {
+        font-size: 1.5rem;
+    }
+
+    /* .popular-title::after {
+        top: 1rem;
+        width: 50px;
+        height: 3px;
+    } */
 }
