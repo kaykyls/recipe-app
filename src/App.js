@@ -1,10 +1,10 @@
 import Pages from './routes';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
-// import Search from './components/Search';
 import Header from './components/header/Header';
 import { useEffect, useState } from 'react';
 import Hero from './components/hero/Hero';
+import Footer from './components/footer/Footer';
 
 function App() {
   const [apiKeyIsValid, setApiKeyIsValid] = useState(true)
@@ -29,6 +29,7 @@ function App() {
         </div>}
         <Hero/>
         <Pages/>
+        <Footer/>
       </div>
     </BrowserRouter>
   );

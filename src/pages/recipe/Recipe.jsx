@@ -21,13 +21,14 @@ const Recipe = () => {
         }
     }
 
-    useEffect(() => {
-        toggleActive()
-    }, [activeTab])
+    // useEffect(() => {
+    //     toggleActive()
+    // }, [activeTab])
 
     const getRecipeDetails = async (id) => {
         const res = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_API_KEY}`)
         const data = await res.json()
+        console.log(data)
         setDetails(data)
         setIngredients(data.extendedIngredients)
     }
@@ -35,27 +36,6 @@ const Recipe = () => {
     useEffect(() => {
         getRecipeDetails(params.id)
     }, [params.id])
-
-    let tab
-
-    switch (activeTab) {
-        case "ingredients":
-            tab = (
-                <ul className="ingredients">
-                    {ingredients.map((ingredient, index) => 
-                        <li key={index}>{ingredient.original}</li>
-                    )}
-                </ul>
-            )
-            break
-        case "instructions":
-            tab =  (
-               <div className='instructions'>
-                    <span dangerouslySetInnerHTML={{__html: details?.instructions}}></span>
-                </div> 
-            )
-            break
-    }
 
     return (
         <div className="recipe-wrapper container">
@@ -65,11 +45,16 @@ const Recipe = () => {
                 <span dangerouslySetInnerHTML={{__html: details?.summary}}></span>
             </div>
             <div className="info">
-                <div className="info-btns">
-                    <button className='active-tab' ref={instructionsBtnRef} onClick={() => {setActiveTab("instructions")}}>Instructions</button>
-                    <button ref={ingredientsBtnRef} onClick={() => {setActiveTab("ingredients")}}>Ingredients</button>
-                </div>
-                {tab}
+                <h3 className='ingredients-text'>Ingredients</h3>
+                <ul className="ingredients">
+                    {ingredients.map((ingredient, index) => 
+                        <li key={index}>{ingredient.original}</li>
+                    )}
+                </ul>
+                <div className='instructions'>
+                    <h3 className='instructions-text'>Instructions</h3>
+                    <span dangerouslySetInnerHTML={{__html: details?.instructions}}></span>
+                </div> 
             </div>
         </div>     
     )

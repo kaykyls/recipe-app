@@ -1,0 +1,35 @@
+.footer {
+    background: #18181B;
+    padding: 4rem 0;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.footer-item-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.footer-item a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 1rem;
+    }
+}
