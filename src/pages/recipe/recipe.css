@@ -90,4 +90,8 @@ ul {
     .recipe-wrapper h2 {
         margin: 2rem 0;
     }
+
+    .about img {
+        height: 300px;
+    }
 }
