@@ -12,7 +12,7 @@ const Popular = () => {
   }, [])
 
   const getPopular = async () => {
-    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=7`)
+    const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=3`)
     const data = await res.json()
     setPopular(data.recipes)
   }
@@ -23,13 +23,16 @@ const Popular = () => {
           <div className="popular-grid">
             {popular?.map((recipe, index) => {
               return(
-                <div className="card" key={index}>
-                  <Link to={`/recipe/${recipe?.id}`}>
-                    <p>{recipe?.title}</p>
-                    <img src={recipe?.image ? recipe.image : "https://png.pngtree.com/png-clipart/20200225/original/pngtree-set-of-food-doodle-vector-illustration-png-image_5306662.jpg"} alt={recipe.title} />
-                    <div className="gradient"></div>
-                  </Link>
-                </div>
+                <Fragment key={index}>
+                  <div className="card" id={`card-${index + 1}`}>
+                    <Link to={`/recipe/${recipe?.id}`}>
+                      <img src={recipe?.image ? recipe.image : "https://png.pngtree.com/png-clipart/20200225/original/pngtree-set-of-food-doodle-vector-illustration-png-image_5306662.jpg"} alt={recipe.title} />
+                      <div className="gradient"></div>
+                      <p>{recipe?.title}</p>
+                    </Link>
+                  </div>
+                  <p className='mobile-title'>{recipe?.title}</p>
+                </Fragment>
               )
             }
             )}

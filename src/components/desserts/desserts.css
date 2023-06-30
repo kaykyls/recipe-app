@@ -4,7 +4,7 @@
     text-align: center;
     overflow: hidden;
     min-height: 270px;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
     /* min-width: 250px; */
 }
 
@@ -34,6 +34,7 @@
     font-size: 1.3rem;
     font-weight: 600;
     margin-top: 1rem;
+    color: #111827;
 }
 
 .dessert-gradient {
@@ -53,5 +54,9 @@
 @media (max-width: 768px) {
     .desserts-title {
         font-size: 1.5rem;
+    }
+
+    .dessert-card {
+        border-radius: .5rem;
     }
 }
