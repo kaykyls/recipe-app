@@ -32,9 +32,9 @@
 
 .dessert-title {
     font-size: 1.3rem;
-    font-weight: 600;
+    /* font-weight: 600; */
     margin-top: 1rem;
-    color: #111827;
+    color: #101010;
 }
 
 .dessert-gradient {
@@ -47,8 +47,9 @@
 }
 
 .desserts-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {

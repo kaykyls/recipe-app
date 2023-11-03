@@ -1,6 +1,6 @@
 .header-wrapper {
     display: flex;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     justify-content: space-between;
 }
 
@@ -11,10 +11,6 @@
 .logo {
     display: flex;
     align-items: center;
-}
-
-.logo img {
-    height: 50px;
 }
 
 .nav-links {
@@ -32,8 +28,7 @@
 .nav-links a, .nav-links {
     color: #000;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1rem;
     /* text-align: center; */
 }
 
@@ -43,7 +38,7 @@
 
 .cuisines-dropdown {
     position: absolute;
-    top: 4.5rem;
+    top: 2rem;
     background: #fff;
     border-radius: 16px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -81,10 +76,6 @@
 }
 
 @media (max-width: 768px) {
-    .logo img {
-        height: 40px;
-    }
-
     .hamburger-is-active {
         transform: translateX(0) !important;
     }
@@ -115,5 +106,14 @@
 
     .hamburger  {
         display: flex;
+    }
+
+    .cuisines-dropdown {
+        top: 8rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 0;
+        box-shadow: none;
+        z-index: 999;
     }
 }

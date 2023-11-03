@@ -1,7 +1,8 @@
 .hero {
     background-image: url("./hero-bg.jpg");
     background-size: cover;
-    background-position: 60% 40%;
+    /* background-position: 60% 40%; */
+    background-position: top;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,12 +26,12 @@
     /* align-items: center; */
     /* justify-content: center; */
     flex-direction: column;
-    padding: 10rem 0;
-    gap: 1.5rem;
+    padding: 8rem 0;
+    gap: 1rem;
 }
 
 .hero-wrapper h1 {
-    font-size: 3rem;
+    font-size: 40px;
     color: #fff;
     font-weight: 500;
     text-shadow: 0px 2px 20px #0000007c;
@@ -38,9 +39,10 @@
 
 .hero-search {
     display: flex;
-    width: 600px;
+    width: 750px;
     background: #fff;
-    border-radius: .5rem;
+    border-radius: 4px;
+    padding: 0 1rem;
 }
 
 .hero-search .icon {
@@ -62,15 +64,14 @@
 
 .hero-search input::placeholder {
     font-size: 1.2rem;
-    color: #434343;
+    color: #969696;
     font-weight: 500;
 }
 
 .hero span {
-    font-size: 1.5rem;
-    color: #fff;
+    font-size: 20px;
+    color: #C7C7C7;
     text-shadow: 0px 2px 20px #0000007c;
-    font-weight: 500;
 }
 
 .search-is-focused {
@@ -83,7 +84,7 @@
     }
 
     .hero-wrapper {
-        padding: 5rem 1rem;
+        padding: 5rem 0;
     }
 
     .hero-wrapper h1 {
@@ -91,7 +92,7 @@
     }
 
     .hero span {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .hero-search .icon {
